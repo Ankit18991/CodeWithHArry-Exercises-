@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth of social Media</title>
+    <style>
+        body{
+            background-color: #071b24;
+            color: white;
+        }
+        /* Stying The navbar */
+        /* Responsiveness is Not taken Care off... Because of the time constraints */
+        header{
+            position:sticky;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+        }
+        
+        #nav{
+            background-color: #9bdffd;
+            height: 5.3vh;
+        }
+
+        #nav li{
+            display: inline;
+            margin-right: 170px;
+            list-style: none;
+            position: relative;
+            top: 0.5rem;
+        }
+
+        #nav li a{
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+
+        /* Styling the mid-containers */
+        .container{
+            border: 4px solid rgb(25, 54, 25);
+            width: 35%;
+            height: 40vh;
+            position: relative;
+            left: 10%;
+            top: 5vh;
+            overflow: auto;
+            background-color: #052c18b0;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1rem;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .container h2{
+            font-weight: bold;
+            color: #0ecaac;
+        }
+
+        .container:nth-child(2){
+            border: 4px solid  rgb(25, 54, 25);
+            position: absolute;
+            left: 60%;
+            top: 14vh;
+            bottom: 39.5vh;
+        }
+
+       #description{
+            border: 6px solid whitesmoke;
+            width:70%;
+            margin: 15vh auto;
+            border-radius: 45px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-style: italic;
+            box-shadow: 0.1rem 0.1rem 2rem 0.1rem #04ac36;
+        }
+
+        /* Designing the main element */
+        main{
+            background-color: #243741;
+            height: 50vh;
+            border-radius: 15px;
+        }
+
+        /* Designing the footer */
+        footer figure{
+            position: relative;
+            left: 91%;
+            bottom: 30vh;
+        }
+
+        footer figure img{
+            position: fixed;
+            box-shadow: 0.1rem 0.1rem 2rem 0.1rem #04ac36;
+            z-index: 4;
+        }
+
+        footer p{
+            text-align: center;
+            background-color: #243741;
+            box-shadow: 0.1rem 0.1rem 2rem 0.1rem #04ac36;
+            border-radius: 10px;
+            height: 6vh;
+            font-weight: bold;
+            font-size: 1.4rem;
+            padding-top: 14px;
+            width: 30%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="container">
+        <h2>
+            Section-1
+        </h2>
+
+        <article id="article-1">
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit numquam maiores illum, expedita, harum quasi eum earum nisi nesciunt asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, dicta! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, et?
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <section class="container">
+        <h2>
+            Section-2
+        </h2>
+
+        <article id="article-2">
+            <div>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem non illo aliquam iusto cum maiores numquam, nisi praesentium porro, magnam, rem labore quod? Well I did Try To Find Out the meaning of these words and texts all together...Just forgot the meaning of DUMMY. Fooled myself.
+                </p>
+            </div>
+        </article>
+    </section>
+    </main>
+
+    <section id="description">
+        <h2>
+            Welcome To Sigma Web Development Course
+        </h2>
+
+        <div>
+            <p>
+                This is Course is All about theory and relevant Practicals. People Definately Are exploring the importance of this Course. But the main part of this course which will Define how Good this course is , Is Javascript and it's Frameworks and The CSS(Which is handled Beautifully by the Narrator, author, Director and The Maker of this Course, Mr. Harris Ali Khan).
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <figure>
+            <img src="https://i.pinimg.com/originals/b3/d4/a0/b3d4a0b19c99aa4658b3341429c42f1f.png" alt="" style="width: 4%; height: auto; border-radius: 50%;">
+            <figcaption></figcaption>
+        </figure>
+        <p>CodeWithHarry &copy;</p>
+    </footer>
+</body>
+</html>
