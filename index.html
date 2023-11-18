@@ -1,13 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <!-- <link rel="stylesheet" href="./styles/responsive.css"> -->
+    <style>
+        /* Navigation Bar */
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Courgette&family=Croissant+One&family=Dancing+Script:wght@400;700&family=Edu+TAS+Beginner:wght@600&family=Lora:ital,wght@1,500&family=Love+Ya+Like+A+Sister&family=Playball&family=Stylish&family=Ubuntu:wght@300&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Courgette&family=Croissant+One&family=Dancing+Script:wght@400;700&family=Edu+TAS+Beginner:wght@600&family=Kanit:wght@300&family=Lora:ital,wght@1,500&family=Love+Ya+Like+A+Sister&family=Playball&family=Stylish&family=Ubuntu:wght@300&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            row-gap: 9vh;
+        }
+
+        #navbar {
+            display: flex;
+            column-gap: 30%;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+        }
+
+        #navbar img {
+            height: 7vh;
+        }
+
+        #navbar1 {
+            display: flex;
+            column-gap: 26%;
+        }
+
+        #navbar li {
+            list-style: none;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #navbar1 li a {
+            font-size: 0.8rem;
+            display: block;
+            width: 4vw;
+            text-decoration: none;
+            font-weight: 600;
+            color: black;
+        }
+
+        #navbar1 li a:hover {
+            filter: opacity(0.7);
+        }
+
+        /* Downloader content */
+        #article-1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #article-1 div img {
+            height: 4.9vh;
+        }
+
+        #article-1 div:first-child {
+            display: flex;
+            /* border: 3px solid blue; */
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            column-gap: 2.5%;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 500;
+        }
+
+        #article-1 div:nth-child(2) {
+            /* border: 2px solid blueviolet; */
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+            font-size: 1.4rem;
+            font-family: 'Kanit', sans-serif;
+            text-wrap: balance;
+        }
+
+        .btn {
+            width: 43%;
+            margin: auto;
+            padding: 10px;
+            border-radius: 11px;
+            color: white;
+            font-weight: bold;
+            background-color: #00b6d1;
+            cursor: pointer;
+        }
+
+        #article-1 div:nth-child(3) {
+            /* border: 4px solid darkblue; */
+            width: 75%;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            column-gap: 1.5%;
+            margin-top: 12vh;
+        }
+
+        #article-1 div:nth-child(3) img {
+            position: relative;
+            bottom: 1vh;
+            height: 8vh;
+        }
+
+        .first {
+            font-size: 1.4rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #article-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            width: 70%;
+            margin: auto;
+            column-gap: 3%;
+            row-gap: 2vh;
+            position: relative;
+            right: 2%;
+            top: 4vh;
+        }
+
+        /* Editing OUr languages sectrion using grid :) */
+        #article-2 .myLang {
+            display: flex;
+            flex-direction: column;
+            /* border: 3px solid salmon; */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 22vh;
+            border-radius: 8px;
+            background-color: #e9e8e7;
+        }
+
+        .language {
+            font-family: 'Kanit', sans-serif;
+            font-weight: bolder;
+        }
+
+        .sub-language {
+            font-size: 0.8rem;
+            filter: opacity(0.8);
+            position: relative;
+            bottom: 2vh;
+        }
+
+        .btn-container {
+            display: flex;
+            column-gap: 1vw;
+        }
+
+        .btn-container button:first-child {
+            background-color: #00b6d1;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn-container button:first-child:hover {
+            filter: opacity(0.7) contrast(1) saturate(2);
+            color: black;
+        }
+
+        .btn-container button:nth-child(2) {
+            background-color: #16e316;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn-container button:nth-child(2):hover {
+            filter: opacity(0.7) contrast(1) saturate(2);
+            color: black;
+        }
+
+        @media only screen and (max-width: 1335px) {
+            main {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                    'nav nav nav'
+                    'article1 article1 article1'
+                    'article2 article2 article2'
+                ;
+            }
+
+            /* Handling the navbar */
+
+            nav {
+                grid-area: nav;
+            }
+
+            #navbar {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                margin: auto;
+                row-gap: 4vh;
+                overflow: auto;
+            }
+
+            #navbar img {
+                justify-self: center;
+            }
+
+            #navbar1 {
+                justify-self: center;
+                column-gap: 1vw;
+                align-items: center;
+                width: 100%;
+            }
+
+            #navbar1 li a {
+                display: inline-block;
+                width: 20vw;
+                font-weight: bold;
+            }
+
+            /* Handling my Section's responsiveness */
+
+            #article-1 {
+                grid-area: article1;
+                text-rendering: geometricPrecision;
+            }
+
+            #article-1 div:first-child {
+                flex-direction: column;
+                text-align: center;
+                text-rendering: geometricPrecision;
+            }
+
+            #article-1 div:nth-child(2) {
+                width: 80vw;
+            }
+
+            #article-1 div:nth-child(2) p {
+                width: 85vw;
+                text-align: center;
+            }
+
+            #article-1 div:nth-child(2) button {
+                width: 79vw;
+                line-height: 2.5vh;
+            }
+
+            #article-1 div:nth-child(3) p:nth-child(2) {
+                font-size: 0.1rem;
+            }
+
+            #article-2 {
+                /* border: 3px solid blue; */
+                grid-area: article2;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: center;
+                overflow: hidden;
+                width: 96vw;
+                margin: auto;
+            }
+
+            .myLang {
+                /* border: 4px solid rebeccapurple; */
+                border-radius: 10px;
+                grid-column: 1/4;
+                position: relative;
+                padding-bottom: 6vh;
+                width: 100vw;
+                left: 1vw;
+            }
+
+        }
+    </style>
 
 </head>
+
 <body>
     <main>
         <nav>
@@ -29,13 +317,15 @@
                 </div>
 
                 <div>
-                    <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</p>
+                    <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of
+                        the text editor.</p>
 
                     <button class="btn">DOWNLAOD MAC OR LINUX VERSION</button>
                 </div>
 
                 <div>
-                    <img src="https://yt3.googleusercontent.com/sE4uxzjMJvX6j5kk1VSG5IB5klUBWKeYECDralFCB_ZheuokAmaqBacjiNqeulOl-p8iQnx3=s900-c-k-c0x00ffffff-no-rj" alt="UltraEdit Logo">
+                    <img src="https://yt3.googleusercontent.com/sE4uxzjMJvX6j5kk1VSG5IB5klUBWKeYECDralFCB_ZheuokAmaqBacjiNqeulOl-p8iQnx3=s900-c-k-c0x00ffffff-no-rj"
+                        alt="UltraEdit Logo">
 
                     <p class="first">Download UltraEdit</p>
                     <p style="filter: opacity(0.6);"> v2023.1(released 08/16/2023) | Hotfix</p>
@@ -47,10 +337,10 @@
                     <p class="language">
                         English
                     </p>
-                <div class="btn-container">
-                    <button>Download 32-bit</button>
-                    <button>Download 64-bit</button>
-                </div>
+                    <div class="btn-container">
+                        <button>Download 32-bit</button>
+                        <button>Download 64-bit</button>
+                    </div>
                 </div>
 
                 <div class="myLang">
@@ -173,4 +463,5 @@
         </section>
     </main>
 </body>
+
 </html>
