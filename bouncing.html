@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing - Ball</title>
+    <style>
+        .container{
+            background-color:  #062f3f;
+            height: 80vh;
+        }
+
+        .container1{
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            animation: bouncing 4s infinite normal;
+        }
+
+        @keyframes bouncing{
+            0%{
+                /* transform: translateX(0%) translateY(0px); */
+                
+                transition: all cubic-bezier(0, 0.21, 0.95, 0.74) 1.2s;
+            }
+
+            25%{
+                transform: translateX(35vw) translateY(75vh);
+                transition: all cubic-bezier(0.34, 0.36, 0.99, 0.44) 0.5s;
+            }
+
+            50%{
+                transform: translateX(58vw) translateY(30vh);
+                transition: all ease-out 0.5s;
+            }
+
+            100%{
+                transform: translateX(80vw) translateY(70vh);
+                transition: all ease-in 1.8s;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            &nbsp;
+        </div>
+    </div>
+</body>
+</html>
