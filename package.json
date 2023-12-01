@@ -1,11 +1,14 @@
 {
   "name": "exercises",
   "version": "1.0.0",
-  "description": "For taking user inout",
-  "main": "faulty_calculator.js",
+  "description": "Just something",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Utkarsh Kumar",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
